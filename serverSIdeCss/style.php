@@ -302,6 +302,10 @@ echo "
             margin-left: 0%;
             margin-right: 0%;
         }
+        .content {
+            height: 130vh;
+            overflow-y: hidden;
+        }
     }
 "
 
