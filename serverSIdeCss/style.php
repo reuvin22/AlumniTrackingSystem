@@ -8,6 +8,93 @@ echo "
         box-sizing: border-box;
         font-family: sans-serif;
     }
+    .hero {
+        width: 100%;
+        height: 100vh;
+    }
+    .introContainer {
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        margin: 0 auto;
+    }
+    .intro {
+        width: 40%;
+        gap: 20px;
+        display: grid;
+        place-items: center;
+    }
+    .intro > h1 {
+        font-size: 40px;
+    }
+    .intro > span {
+        font-size: 25px;
+        text-align: center;
+        
+    }
+    .buttons {
+        display: flex;
+        gap: 20px;
+    }
+    .buttons > button{
+        height: 30px;
+        padding: 15px 20px;
+        display: flex;
+        place-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    .formContainer {
+        display: none;
+        width: 60%;
+        border: 2px solid black;
+        position: absolute;
+        height: 500px;
+        z-index: 1;
+        background-color: gray;
+    }
+    .alumniData {
+        display: grid;
+        gap: 20px;
+        place-items: center;
+        margin-top: 14%;
+    }
+    .data1, .data2, .data3 {
+        display: flex;
+        align-items: center;
+        width: 30%;
+        gap: 20px;
+    }
+    .data1 > input, .data2 > input, .data3 > input {
+        margin-top: 5%;
+        height: 40px;
+        padding-left: 20px;
+        font-size: 15px;
+        margin-top: 15%;
+    }
+    .data3 > select {
+        margin-top: 5%;
+        height: 40px;
+        padding-left: 10px;
+        font-size: 15px;
+        margin-top: 15%;
+        width: 215px;
+    
+    }
+    .dataIntro {
+        display: grid;
+        place-items: center;
+    }
+    .dataIntro > h1 {
+        color: white;
+    }
+    .alumniData > button {
+        width: 30%;
+        height: 35px;
+        cursor: pointer;
+    }
     .form-container {
         width: 100%;
         height: 100vh;
@@ -225,17 +312,10 @@ echo "
         place-items: center;
         gap: 6px
     }
-    .buttonsCrud > button {
-        height: 30px;
-        width: 50px;
-        cursor: pointer;
-    }
-    .update {
-        background-color: green;
-        color: white;
-        border: none;
-    }
     .delete {
+        height: 40px;
+        width: 60px;
+        cursor: pointer;
         background-color: red;
         color: white;
         border: none;
@@ -305,6 +385,11 @@ echo "
         .content {
             height: 130vh;
             overflow-y: hidden;
+        }
+        .intro {
+            display: grid;
+            place-items: center;
+            width: 100%;
         }
     }
 "

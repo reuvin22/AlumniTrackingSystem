@@ -19,7 +19,7 @@
                 <a href="./alumniList.php" class="links">Alumni info</a>
             </div>
             <div class="navImage">
-                <a href="./php/login.php"><img src="./images/logout.png" alt="Logout" class='logo'></a>
+                <a href="./php/logout.php"><img src="./images/logout.png" alt="Logout" class='logo'></a>
                 <a href="./php/logout.php" class="links">Logout</a>
             </div>
         </div>

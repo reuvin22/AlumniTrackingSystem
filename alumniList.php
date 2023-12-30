@@ -49,7 +49,13 @@
                                             <td>". $row['civilStatus']."</td>
                                             <td>".$row['employmentStatus']."</td>
                                             <td>".$row['relatedOrNot']."</td>
-                                            <td><div class='buttonsCrud'><button class='update'>Update</button><button class='delete'>Delete</button></div></td>
+                                            <td>
+                                                <div class='buttonsCrud'>
+                                                    <a href='./php/deleteData.php?id=".$row['id']."'>
+                                                        <button class='delete'>Delete</button>
+                                                    </a>
+                                                </div>
+                                            </td>
                                             </tr>";
                                         }
                                     }
