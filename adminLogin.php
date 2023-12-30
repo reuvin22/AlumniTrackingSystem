@@ -9,7 +9,7 @@
 <body>
     <div class="form-container">
         <form action="./php/login.php" method="post">
-            <legend>Admin Login</legend>
+            <legend>Admin LoginA</legend>
             <label for="username">Username</label>
             <input type="text" name="username" id="username">
             <label for="password">Password</label>
