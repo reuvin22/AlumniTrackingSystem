@@ -37,7 +37,7 @@ echo "
         display: flex;
         gap: 20px;
     }
-    .buttons > button{
+    .buttons > button, .adminLogin{
         height: 30px;
         padding: 15px 20px;
         display: flex;
@@ -46,20 +46,22 @@ echo "
         cursor: pointer;
         font-size: 20px;
     }
+    .buttons > a {
+        text-decoration: none;
+    }
     .formContainer {
         display: none;
         width: 60%;
-        border: 2px solid black;
         position: absolute;
         height: 500px;
         z-index: 1;
-        background-color: gray;
+        background-color: rgb(46,131,211);
+        border-radius: 20px;
     }
     .alumniData {
         display: grid;
         gap: 20px;
         place-items: center;
-        margin-top: 14%;
     }
     .data1, .data2, .data3 {
         display: flex;
@@ -74,14 +76,19 @@ echo "
         font-size: 15px;
         margin-top: 15%;
     }
-    .data3 > select {
+    .data3 > select{
         margin-top: 5%;
         height: 40px;
         padding-left: 10px;
         font-size: 15px;
         margin-top: 15%;
-        width: 215px;
-    
+    }
+    .data2 > select{
+        margin-top: 5%;
+        height: 40px;
+        padding-left: 10px;
+        font-size: 15px;
+        margin-top: 15%;
     }
     .dataIntro {
         display: grid;
@@ -103,7 +110,6 @@ echo "
     }
     form {
         display: grid;
-        border: 1px solid black;
         height: 300px;
         width: 400px;
         padding: 30px 60px;
@@ -242,7 +248,7 @@ echo "
     .chart1 {
         height: 70%;
         width: 60%;
-        box-shadow: 2px 1px 20px -5px rgba(0,0,0,0.75);
+        box-shadow: 2px 1px 20px -5px rgba(0,0,0,employment.data0.75);
         padding: 0px 30px;
         border-radius: 20px;
     }
@@ -390,6 +396,9 @@ echo "
             display: grid;
             place-items: center;
             width: 100%;
+        }
+        .data1, .data2, .data3 {
+            display: grid;
         }
     }
 "

@@ -7,14 +7,14 @@
     <link rel="stylesheet" type="text/css" href="./serverSIdeCss/style.php">
 </head>
 <body>
-    <div class="hero">
+    <div class="hero" id="hero">
         <div class="introContainer">
             <div class="intro">
                 <h1>Alumni Tracking System</h1>
                 <span>We're monitoring the employment status of every graduate students in Laguna State Polytechnic University</span>
                 <div class="buttons">
                     <button class="form" id="form">Form</button>
-                    <button class="adminLogin">Login</button>
+                    <a href="./adminLogin.php"><button class="adminLogin">Login</button></a>
                 </div>
                 <div class="formContainer" id="formContainer">
                     <div class="dataIntro">
@@ -29,8 +29,14 @@
                         </div>
                         <div class="data2">
                             <input type="number" name="studentNumber" id="studentNumber" placeholder="Student Number">
-                            <input type="text" name="occupation" id="occupation" placeholder="Occupation if any">
-                            <input type="text" name="company" id="company" placeholder="Company if any"> 
+                            <select name="employmentStatus" id="jobStatus">
+                                <option value="Employed">Employed</option>
+                                <option value="Unemployed">Unemployed</option>
+                            </select>
+                            <select name="relatedOrNot" id="relatedOrNot">
+                                <option value="Related">Related</option>
+                                <option value="Not Related">Not Related</option>
+                            </select>
                         </div>      
                         <div class="data3">
                             <select name="course" id="course">
@@ -43,16 +49,15 @@
                                     <option value="Bachelor of Science in Accountancy">Bachelor of Science in Accountancy</option>
                                 </optgroup>
                             </select>
-                            <select name="relatedOrNot" id="">
-                                <option value="related">Related</option>
-                                <option value="notRelated">Not Related</option>
+                            <select name="year" id="year">
+                                <option value="2018">2018</option>
+                                <option value="2018">2019</option>
+                                <option value="2018">2020</option>
+                                <option value="2018">2021</option>
+                                <option value="2018">2022</option>
                             </select>
-                            <input type="text" name="currentWork" id="currentWork" placeholder="Current Work"> 
-                        </div>  
-                        <div class="data4">
-                            <input type="text" name="year" id="year" placeholder="Year Graduated MM/DD/YY">
                             <input type="text" name="civilStatus" id="civilStatus" placeholder="Civil Status">
-                        </div>
+                        </div>  
                     </div>
                     <button type="submit" name="submit">Submit</button>
                     </form>
