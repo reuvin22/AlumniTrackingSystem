@@ -49,6 +49,7 @@ echo "
     .buttons > a {
         text-decoration: none;
     }
+    
     .formContainer {
         display: none;
         width: 60%;
@@ -136,6 +137,15 @@ echo "
     }
     form > legend {
         font-size: 30px;
+        font-weight: bold;
+    }
+    .homepage {
+        text-decoration: none;
+        margin-top: 5%;
+        margin-left: 25%;
+        color: blue;
+    }
+    .homepage:hover {
         font-weight: bold;
     }
     .nav-container {
@@ -390,7 +400,6 @@ echo "
         }
         .content {
             height: 130vh;
-            overflow-y: hidden;
         }
         .intro {
             display: grid;

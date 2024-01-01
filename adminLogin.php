@@ -15,6 +15,7 @@
             <label for="password">Password</label>
             <input type="password" name="password" id="password">
             <button type="submit" name="submit">Login</button>
+            <a href="./index.php" class="homepage">Back to homepage</a>
         </form>
     </div>
 </body>

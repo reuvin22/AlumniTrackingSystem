@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type='text/css' href="./serverSIdeCss/style.php">
+<link rel="stylesheet" type='text/css' href="./serverSIdeCss/style.php">
 </head>
 <body>
     <div class="nav-container">

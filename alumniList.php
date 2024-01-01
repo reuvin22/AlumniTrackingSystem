@@ -20,11 +20,9 @@
                             <tr>
                                 <th>Student Number</th>
                                 <th>Full Name</th>
-                                <th>Contact Number</th>
                                 <th>Gender</th>
                                 <th>Course</th>
                                 <th>Year Graduated</th>
-                                <th>Occupation</th>
                                 <th>Civil Status</th>
                                 <th>Employment Status</th>
                                 <th>Related/Not</th>
@@ -44,8 +42,6 @@
                                             <td>".$row['gender']."</td>
                                             <td>".$row['course']."</td>
                                             <td>". $row['years']."</td>
-                                            <td>". $row['occupation']."</td>
-                                            <td>".$row['company']. "</td>
                                             <td>". $row['civilStatus']."</td>
                                             <td>".$row['employmentStatus']."</td>
                                             <td>".$row['relatedOrNot']."</td>
