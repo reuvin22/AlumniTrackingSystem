@@ -51,13 +51,16 @@ echo "
     }
     
     .formContainer {
-        display: none;
-        width: 60%;
+        display: block;
+        min-width: 65%;
         position: absolute;
         height: 500px;
         z-index: 1;
         background-color: rgb(46,131,211);
         border-radius: 20px;
+    }
+    .data {
+        width: 100%;
     }
     .alumniData {
         display: grid;
@@ -72,10 +75,12 @@ echo "
     }
     .data1 > input, .data2 > input, .data3 > input {
         margin-top: 5%;
-        height: 40px;
+        min-height: 40px;
         padding-left: 20px;
         font-size: 15px;
         margin-top: 15%;
+        min-width: 105%;
+        position: relative;
     }
     .data3 > select{
         margin-top: 5%;
@@ -83,6 +88,7 @@ echo "
         padding-left: 10px;
         font-size: 15px;
         margin-top: 15%;
+        min-width: 105%;
     }
     .data2 > select{
         margin-top: 5%;
@@ -90,6 +96,7 @@ echo "
         padding-left: 10px;
         font-size: 15px;
         margin-top: 15%;
+        min-width: 105%;
     }
     .dataIntro {
         display: grid;
@@ -111,16 +118,10 @@ echo "
     }
     form {
         display: grid;
-        height: 300px;
-        width: 400px;
+        height: 350px;
+        width: 100%;
         padding: 30px 60px;
         border-radius: 20px;
-    }
-    form > input {
-        height: 30px;
-        width: 100%;
-        font-size: 20px;
-        padding: 4% 5%;
     }
     label {
         margin-top: 10%;
@@ -380,6 +381,9 @@ echo "
             width: 80%;
             height: 100%;
         }
+        .data1 > input, .data2 > input, .data3 > input {
+            min-width: 260%;
+        }
         .navImage1 > .links, .navImage > .links, .navImage2 > .links{
             display: none;
         }
@@ -415,8 +419,31 @@ echo "
             place-items: center;
             width: 100%;
         }
+        .formContainer {
+            min-height: 95%;
+        }
         .data1, .data2, .data3 {
             display: grid;
+        }
+        .data3 > select{
+            margin-top: 0%;
+            min-width: 300%;
+        }
+        .data3 > input{
+            margin-top: 0%;
+            min-width: 300%;
+        }
+        .data2 > select{
+            min-width: 300%;
+        }
+        .data2 > input{
+            min-width: 300%;
+        }
+        .data1 > input{
+            min-width: 300%;
+        }
+        .data1 {
+            margin-bottom: 7%;
         }
     }
 "
