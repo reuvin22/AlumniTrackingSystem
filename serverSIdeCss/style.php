@@ -336,6 +336,15 @@ echo "
         color: white;
         border: none;
     }
+    .Xclose {
+        max-width: 90px;
+        max-height: 10px;
+        min-height: 20px;
+        min-width: 30px;
+        margin-top: 30px;
+        margin-left: 30px;
+        cursor: pointer;
+    }
     @media only screen and (max-width: 700px) {
         .nav-container {
             width: 100px;

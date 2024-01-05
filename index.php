@@ -17,6 +17,7 @@
                     <a href="./adminLogin.php"><button class="adminLogin">Login</button></a>
                 </div>
                 <div class="formContainer" id="formContainer">
+                    <img src="./images/xWhite.png" alt="Close" id="closebtn" class="Xclose">
                     <div class="dataIntro">
                         <h1>Alumni Data</h1>
                     </div>
@@ -27,17 +28,6 @@
                             <input type="text" name="mname" id="mname" placeholder="Middle Name">
                             <input type="text" name="lname" id="lname" placeholder="Last Name"> 
                         </div>
-                        <div class="data2">
-                            <input type="number" name="studentNumber" id="studentNumber" placeholder="Student Number">
-                            <select name="employmentStatus" id="jobStatus">
-                                <option value="Employed">Employed</option>
-                                <option value="Unemployed">Unemployed</option>
-                            </select>
-                            <select name="relatedOrNot" id="relatedOrNot">
-                                <option value="Related">Related</option>
-                                <option value="Not Related">Not Related</option>
-                            </select>
-                        </div>      
                         <div class="data3">
                             <select name="course" id="course">
                                 <optgroup>
@@ -57,7 +47,18 @@
                                 <option value="2018">2022</option>
                             </select>
                             <input type="text" name="civilStatus" id="civilStatus" placeholder="Civil Status">
-                        </div>  
+                        </div>
+                        <div class="data2">
+                            <input type="number" name="studentNumber" id="studentNumber" placeholder="Student Number">
+                            <select name="employmentStatus" id="jobStatus">
+                                <option value="Employed">Employed</option>
+                                <option value="Unemployed">Unemployed</option>
+                            </select>
+                            <select name="relatedOrNot" id="relatedOrNot">
+                                <option value="Related">Related</option>
+                                <option value="Not Related">Not Related</option>
+                            </select>
+                        </div>      
                     </div>
                     <button type="submit" name="submit">Submit</button>
                     </form>
@@ -65,6 +66,21 @@
             </div>
         </div>
     </div>
-    <script src="./script.js"></script>
+    <script>
+        const formButton = document.getElementById('form');
+        const formContainer = document.getElementById('formContainer');
+        const closebtn = document.getElementById('closebtn');
+        const body = document.body;
+
+        formButton.addEventListener('click', function() {
+            formContainer.style.display = 'block';
+            body.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+        });
+
+        closebtn.addEventListener('click', function() {
+            formContainer.style.display = 'none';
+            body.style.backgroundColor = '';
+        });
+    </script>
 </body>
 </html>
