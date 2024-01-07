@@ -9,9 +9,10 @@
     $relatedOrNot = mysqli_real_escape_string($conn, $_POST['relatedOrNot']);
     $course = mysqli_real_escape_string($conn, $_POST['course']);
     $employmentStatus = mysqli_real_escape_string($conn, $_POST['employmentStatus']);
+    $gender = mysqli_real_escape_string($conn, $_POST['gender']);
 
     if(isset($_POST['submit'])){
-        $sql = "INSERT INTO `alumni`(`studentNumber`, `firstName`, `middleName`, `lastName`,  `civilStatus`, `course`, `relatedOrNot`, `years`, `employmentStatus`) VALUES ('$studentNumber','$fname', '$mname', '$lname', '$civilStatus', '$course', '$relatedOrNot', '$year', '$employmentStatus')";
+        $sql = "INSERT INTO `alumni`(`studentNumber`, `firstName`, `middleName`, `lastName`,  `gender`, `civilStatus`, `course`, `relatedOrNot`, `years`, `employmentStatus`) VALUES ('$studentNumber','$fname', '$mname', '$lname', '$gender', '$civilStatus', '$course', '$relatedOrNot', '$year', '$employmentStatus')";
 
         $query = mysqli_query($conn, $sql);
 

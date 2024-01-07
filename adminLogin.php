@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="form-container">
-        <form action="./php/login.php" method="post">
+        <form action="./php/login.php" method="post" class="login">
             <legend>Admin Login</legend>
             <label for="username">Username</label>
             <input type="text" name="username" id="username">

@@ -58,7 +58,13 @@
                                 <option value="Related">Related</option>
                                 <option value="Not Related">Not Related</option>
                             </select>
-                        </div>      
+                        </div>  
+                        <div class="data2">
+                                <select name="gender" id="gender">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>    
                     </div>
                     <button type="submit" name="submit">Submit</button>
                     </form>

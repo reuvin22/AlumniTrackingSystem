@@ -51,7 +51,7 @@ echo "
     }
     
     .formContainer {
-        display: block;
+        display: none;
         min-width: 65%;
         position: absolute;
         height: 500px;
@@ -72,6 +72,7 @@ echo "
         align-items: center;
         width: 30%;
         gap: 20px;
+        margin-left: 2.3%;
     }
     .data1 > input, .data2 > input, .data3 > input {
         margin-top: 5%;
@@ -79,8 +80,7 @@ echo "
         padding-left: 20px;
         font-size: 15px;
         margin-top: 15%;
-        min-width: 105%;
-        position: relative;
+        min-width: 100%;
     }
     .data3 > select{
         margin-top: 5%;
@@ -88,7 +88,7 @@ echo "
         padding-left: 10px;
         font-size: 15px;
         margin-top: 15%;
-        min-width: 105%;
+        min-width: 100%;
     }
     .data2 > select{
         margin-top: 5%;
@@ -96,7 +96,7 @@ echo "
         padding-left: 10px;
         font-size: 15px;
         margin-top: 15%;
-        min-width: 105%;
+        min-width: 100%;
     }
     .dataIntro {
         display: grid;
@@ -109,6 +109,13 @@ echo "
         width: 30%;
         height: 35px;
         cursor: pointer;
+        border: none;
+        font-weight: bold;
+        border-radius: 20px;
+    }
+    .alumniData > button:hover {
+        background-color: blue;
+        color: white;
     }
     .form-container {
         width: 100%;
@@ -116,17 +123,27 @@ echo "
         display: grid;
         place-items: center;
     }
-    form {
+    .login {
         display: grid;
         height: 350px;
         width: 100%;
         padding: 30px 60px;
         border-radius: 20px;
+        background-color: white;
+        width: 40%;
+        border: 1px solid black;
+    }
+    .login > input {
+        height: 40px;
+        width: 100%;
+        font-size: 20px;
+        padding-left: 15px;
+        margin-top: 2%;
     }
     label {
-        margin-top: 10%;
+        margin-top: 5%;
     }
-    form > button {
+    .login > button {
         cursor: pointer;
         height: 40px;
         margin-top: 20px;
@@ -136,14 +153,14 @@ echo "
         color: white;
         font-weight: bold;
     }
-    form > legend {
+    .login > legend {
         font-size: 30px;
         font-weight: bold;
     }
     .homepage {
         text-decoration: none;
         margin-top: 5%;
-        margin-left: 25%;
+        margin-left: 33%;
         color: blue;
     }
     .homepage:hover {
@@ -287,8 +304,6 @@ echo "
     .content {
         width: 83%;
         height: 100vh;
-    }
-    .content {
         display: grid;
         place-items: center;
     }
@@ -297,7 +312,7 @@ echo "
         place-items: center;
         margin-top: -30%;
         width: 95%;
-
+        max-height: 800px;
     }
     .titleTable {
         display: flex;
@@ -349,6 +364,7 @@ echo "
     @media only screen and (max-width: 700px) {
         .nav-container {
             width: 100px;
+            height: 100%;
         }
         .navbar > .links {
             display: none;
@@ -357,6 +373,12 @@ echo "
             margin-left: 110px;
             width: 75%;
             display: grid;
+        }
+        .login {
+            width:80%;
+        }
+        .homepage {
+            margin-left: 27%;
         }
         .record {
             display: grid;
@@ -414,6 +436,10 @@ echo "
         .content {
             height: 130vh;
         }
+        .tableContainer {
+            margin-top: -800px;
+            width: 100%;
+        }
         .intro {
             display: grid;
             place-items: center;
@@ -424,6 +450,7 @@ echo "
         }
         .data1, .data2, .data3 {
             display: grid;
+            margin-left: 6%;
         }
         .data3 > select{
             margin-top: 0%;
