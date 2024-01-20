@@ -7,15 +7,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alumni Tracking System</title>
-    <link rel="stylesheet" type='text/css' href="./serverSIdeCss/style.php">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="flex">
         <?php require 'navbar.php'?>
-        <div class="content">
-            <div class="tableContainer">
-                    <div class="titleTable">List of University Alumni</div>
-                    <table>
+        <div class=" w-screen flex justify-center place-items-center">
+            <div class="tableContainer  w-[90%] h-[700px] max-[1024]:w-[20%]">
+                    <div class="text-center text-4xl font-bold mb-5">List of University Alumni</div>
+                    <table class="">
                         <thead>
                             <tr>
                                 <th>Student Number</th>
@@ -26,7 +26,7 @@
                                 <th>Civil Status</th>
                                 <th>Employment Status</th>
                                 <th>Related/Not</th>
-                                <th>Update/Delete</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -48,7 +48,7 @@
                                             <td>
                                                 <div class='buttonsCrud'>
                                                     <a href='./php/deleteData.php?id=".$row['id']."'>
-                                                        <button class='delete'>Delete</button>
+                                                        <button class='bg-red-500 text-white px-5 py-2 rounded-xl hover:bg-red-800'>Delete</button>
                                                     </a>
                                                 </div>
                                             </td>

@@ -4,71 +4,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" type='text/css' href="./serverSIdeCss/style.php">
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="contentContainer">
-        <div class="record">
-            <div class="cards">
-                <div class="image">
-                    <img src="./images/alumni.png" alt="Alumni">
+    <div class="absolute top-0 w-[90%] mt-12 grid place-content-center overflow-hidden ml-[10%]">
+            <div class="xl:flex justify-center items-center gap-8 ml-20 mb-20
+                 md:grid sm:grid lg:flex
+                  max-[639px]:ml-[30%]
+                ">
+                <div class="bg-blue-900 flex justify-center items-center h-24 w-60 gap-5 rounded-2xl
+                ">
+                        <img src="./images/alumni.png" alt="Alumni" class="w-12">
+                    <div class="">
+                        <span class="text-white font-bold text-xl">Total Alumni<br>
+                        <!-- <?php
+                            $sql = "SELECT * FROM `alumni`";
+                            $query = mysqli_query($conn, $sql);
+                            $result = mysqli_num_rows($query);
+                            if($result >= 0){
+                                echo '<h1>'. $result .'</h1></span>';
+                            }
+                        ?> -->
+                    </div>
                 </div>
-                <div class="count">
-                    <span>Total Alumni<br>
-                    <?php
-                        $sql = "SELECT * FROM `alumni`";
-                        $query = mysqli_query($conn, $sql);
-                        $result = mysqli_num_rows($query);
-                        if($result >= 0){
-                            echo '<h1>'. $result .'</h1></span>';
-                        }
-                    ?>
+                <div class="bg-blue-900 flex justify-center items-center h-24 w-60 gap-8 rounded-2xl">
+                        <img src="./images/employed.png" alt="Employed" class="w-12">
+                    <div class="count">
+                        <span class="text-white font-bold text-xl">Employed<br>
+                        <!-- <?php
+                            $sql = "SELECT employmentStatus FROM `alumni` WHERE employmentStatus = 'Employed'";
+                            $query = mysqli_query($conn, $sql);
+                            $result = mysqli_num_rows($query);
+                            if($result >= 0){
+                                echo "<h1>".$result."</h1></span>";
+                            }
+                        ?> -->
+                    </div>
+                </div>
+                <div class="bg-blue-900 flex justify-center items-center h-24 w-60 gap-8 rounded-2xl">
+                        <img src="./images/unemployed.png" alt="Unemployed" class="w-12">
+                    <div class="count">
+                        <span class="text-white font-bold text-xl">Unemployed<br>
+                        <!-- <?php
+                            $sql = "SELECT employmentStatus FROM `alumni` WHERE employmentStatus = 'Unemployed'";
+                            $query = mysqli_query($conn, $sql);
+                            $result = mysqli_num_rows($query);
+                            if($result >= 0){
+                                echo "<h1>".$result."</h1></span>";
+                            }
+                        ?> -->
+                    </div>
                 </div>
             </div>
-            <div class="cards">
-                <div class="image">
-                    <img src="./images/employed.png" alt="Employed">
+            <div class="w-full 
+            sm:w-screen sm:ml-[25%]
+            max-[639px]:w-screen max-[639px]:ml-[19%]
+            ">
+                    <div class="h-full md:h-[50%] sm:h-[50%] max-[639px]:h-[50%]">
+                        <canvas id="employmentStatus">
+                        </canvas>
+                    </div>
+                    <div class="h-[300px] w-[35%]">
+                        <canvas id="genderStatus">
+                        </canvas>
+                    </div>
                 </div>
-                <div class="count">
-                    <span>Employed<br>
-                    <?php
-                        $sql = "SELECT employmentStatus FROM `alumni` WHERE employmentStatus = 'Employed'";
-                        $query = mysqli_query($conn, $sql);
-                        $result = mysqli_num_rows($query);
-                        if($result >= 0){
-                            echo "<h1>".$result."</h1></span>";
-                        }
-                    ?>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="image">
-                    <img src="./images/unemployed.png" alt="Unemployed">
-                </div>
-                <div class="count">
-                    <span>Unemployed<br>
-                    <?php
-                        $sql = "SELECT employmentStatus FROM `alumni` WHERE employmentStatus = 'Unemployed'";
-                        $query = mysqli_query($conn, $sql);
-                        $result = mysqli_num_rows($query);
-                        if($result >= 0){
-                            echo "<h1>".$result."</h1></span>";
-                        }
-                    ?>
-                </div>
-            </div>
         </div>
-        <div class="charts">
-                <div class="chart1">
-                    <canvas id="employmentStatus">
-                    </canvas>
-                </div>
-                <div class="chart2">
-                    <canvas id="genderStatus">
-                    </canvas>
-                </div>
-            </div>
-    </div>
+    <div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <?php
     $sql = "SELECT SUBSTRING(years, 1, 4) AS year, employmentStatus FROM `alumni` WHERE employmentStatus IN ('Employed', 'Unemployed')";
