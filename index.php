@@ -18,11 +18,11 @@
                         <a href="./adminLogin.php"><button class="border-2 py-2 px-8 rounded-lg hover:bg-blue-500 font-bold text-white">Login</button></a>
                     </div>
             </div>
-                <div class=" hidden absolute border-2 border-blue-500 rounded-2xl px-20 py-10 bg-blue-500 grid place-content-center w-11/12" id="formContainer">
+                <div class="hidden absolute border-2 border-blue-500 rounded-2xl px-20 py-10 bg-blue-500 grid place-content-center w-11/12" id="formContainer">
                     <img src="./images/xWhite.png" alt="Close" id="closebtn" class="h-7 w-10 ml-[100%] cursor-pointer">
                     <h1 class="text-center text-4xl font-bold text-white mb-5">Alumni Data</h1>
                     <form action="./php/postData.php" method="post" class="">
-                        <div class="grid grid-cols-3 gap-x-3 gap-y-5">
+                        <div class="grid grid-cols-3 gap-x-3 gap-y-5 max-[640px]:grid-cols-1">
                             <input type="text" name="fname" id="fname" placeholder="First Name" class="h-10 px-5">
                             <input type="text" name="mname" id="mname" placeholder="Middle Name" class="pl-5">
                             <input type="text" name="lname" id="lname" placeholder="Last Name" class="pl-5"> 
